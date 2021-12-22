@@ -15,29 +15,6 @@ const QUERY_ALL_USERS = gql`
     }
 `
 
-// const QUERY = gql`
-//         products(filter: { sku: { eq: "Flavourful Fusions - Kaju (500 gms)" } }) {
-//                 items {
-//                 name
-//                 sku
-//                 url_key
-//                 stock_status
-//                 price_range {
-//                 minimum_price {
-//                 regular_price {
-//                 value
-//                 currency
-//                 }
-//                 }
-//                 }
-//             }
-//                 total_count
-//                 page_info {
-//                 page_size
-//                 }
-//                 }
-// `
-
 const DisplayData = () => {
     const { data: userData, loading: userLoading } = useQuery(QUERY_ALL_USERS);
     if (userLoading) {
